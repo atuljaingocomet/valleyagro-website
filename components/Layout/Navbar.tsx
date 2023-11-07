@@ -11,6 +11,13 @@ import BurgerMenu from "../../public/burgerMenu";
 import BurgerMenuOpen from "../../public/burgerMenuOpen";
 import { mainTheme } from "../../main-theme";
 
+const navItems = [
+  { name: "Home", link: "banner" },
+  { name: "About Us", link: "about-us" },
+  { name: "Products", link: "products" },
+  { name: "Contact Us", link: "contact-us" },
+];
+
 interface Props {
   isMobile: boolean;
 }
@@ -18,10 +25,11 @@ interface Props {
 const MenuSection = ({ isMobile }: Props) => {
   return (
     <ul className={`${isMobile ? "menubar-mobile" : "menubar-container"}`}>
-      <li><a href="#">Home</a></li>
-      <li>About Us</li>
-      <li>Products</li>
-      <li><a href="#contact-us">Contact Us</a></li>
+      {navItems.map((item) => (
+        <li key={item.link}>
+          <a href={`#${item.link}`}>{item.name}</a>
+        </li>
+      ))}
     </ul>
   );
 };
