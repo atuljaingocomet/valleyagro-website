@@ -11,9 +11,9 @@ export const BadgeWrapper = styled.div`
 
   .section-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
     gap: 1rem;
     
     @media only screen and (min-width: 768px) {

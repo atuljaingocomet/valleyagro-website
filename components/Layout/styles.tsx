@@ -16,6 +16,7 @@ export const NavbarWrapper = styled.nav`
 export const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
+  background-color: white;
   width: 100%;
 
   .footer-wrapper {

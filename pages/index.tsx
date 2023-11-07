@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import HeroSection from "../components/HeroSection";
 import ContactUs from "../components/ContactUs";
 import Badges from "../components/Badges";
+import Products from "../components/Products";
+import AboutUs from "../components/AboutUs";
 import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,6 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroSection/>
+      <AboutUs/>
+      <Products/>
       <Badges/>
       <ContactUs/>
     </div>
