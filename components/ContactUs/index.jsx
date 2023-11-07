@@ -27,7 +27,7 @@ const ContactUs = () => {
                 />
                 <p>123, Garden Street, Bengaluru, Karnataka, India - 560001</p>
               </div>
-              <div className="info-row">
+              {/* <div className="info-row">
                 <img
                   src="/contact/phone.svg"
                   alt="address"
@@ -36,7 +36,7 @@ const ContactUs = () => {
                   loading="lazy"
                 />
                 <p>+91 99999 88888, +91 55555 11111</p>
-              </div>
+              </div> */}
               <div className="info-row">
                 <img
                   src="/contact/email.svg"
@@ -45,7 +45,9 @@ const ContactUs = () => {
                   width={20}
                   loading="lazy"
                 />
-                <p>support@valleyagro.com</p>
+                <a href="mailto:harsh.garg@valleyagro.co">
+                  <p>harsh.garg@valleyagro.co</p>
+                </a>
               </div>
             </div>
             <div className="social-icon">
@@ -53,8 +55,8 @@ const ContactUs = () => {
                 <img
                   src="/contact/twitter.svg"
                   alt="address"
-                  height={20}
-                  width={20}
+                  height={30}
+                  width={30}
                   loading="lazy"
                 />
               </a>
@@ -62,8 +64,8 @@ const ContactUs = () => {
                 <img
                   src="/contact/fb.svg"
                   alt="address"
-                  height={20}
-                  width={20}
+                  height={30}
+                  width={30}
                   loading="lazy"
                 />
               </a>
@@ -71,8 +73,8 @@ const ContactUs = () => {
                 <img
                   src="/contact/linkedin.svg"
                   alt="address"
-                  height={20}
-                  width={20}
+                  height={30}
+                  width={30}
                   loading="lazy"
                 />
               </a>

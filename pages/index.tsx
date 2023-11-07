@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection";
 import ContactUs from "../components/ContactUs";
 import Badges from "../components/Badges";
 import Products from "../components/Products";
+import Timeline from "../components/Timeline";
 import AboutUs from "../components/AboutUs";
 import styles from "@/styles/Home.module.css";
 
@@ -23,6 +24,7 @@ export default function Home() {
       </Head>
       <HeroSection />
       <AboutUs />
+      <Timeline />
       <Products />
       <Badges />
       <ContactUs />

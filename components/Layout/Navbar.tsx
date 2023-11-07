@@ -60,7 +60,9 @@ const Navbar = () => {
         <Logo />
         <div className="menu-and-btn">
           <MenuSection isMobile={false} />
-          <button className="contact-btn">Get in Touch</button>
+          <button className="contact-btn">
+            <a href="#contact-us">Get in Touch</a>
+          </button>
         </div>
       </NavbarContent>
       <NavbarContentMobile>
