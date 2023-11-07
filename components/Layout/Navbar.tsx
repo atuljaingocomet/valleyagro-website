@@ -18,10 +18,10 @@ interface Props {
 const MenuSection = ({ isMobile }: Props) => {
   return (
     <ul className={`${isMobile ? "menubar-mobile" : "menubar-container"}`}>
-      <li>Home</li>
+      <li><a href="#">Home</a></li>
       <li>About Us</li>
       <li>Products</li>
-      <li>Contact Us</li>
+      <li><a href="#contact-us">Contact Us</a></li>
     </ul>
   );
 };

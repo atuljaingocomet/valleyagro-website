@@ -17,19 +17,73 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: ${mainTheme.colors.stroke};
-`;
 
-export const ContentWrapper = styled.main`
-  display: flex;
-  justify-content: center;
-  padding-top: 1.5rem;
-  background-color: white;
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-direction: column;
 
-  .right-mob-arrow {
-    position: absolute;
-    right: -30px;
-    top: 10px;
+    @media only screen and (min-width: 768px) {
+      padding: 3rem 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .right-reserved {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .right {
+    width: 50%;
+    max-width: 70%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-transform: uppercase;
+      padding: 0;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      
+      @media only screen and (min-width: 768px) {
+        margin-top: unset;
+        gap: 1rem;
+        padding: 3rem 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    li {
+      display: flex;
+      position: relative;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      font-size: 1.3rem;
+    }
+
+    li:hover {
+      color: ${mainTheme.colors.yellowMain};
+    }
+
+    li:hover::after {
+      content: "";
+      display: block;
+      width: 1rem;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      margin: auto;
+      border-bottom: 2px solid ${mainTheme.colors.yellowMain};
+    }
   }
 `;
 
@@ -77,14 +131,14 @@ export const NavbarContent = styled.div`
     }
   }
 
-  .menu-and-btn{
+  .menu-and-btn {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
   }
 
-  .contact-btn{
+  .contact-btn {
     background-color: transparent;
     color: black;
     border-radius: 5px;
@@ -94,8 +148,8 @@ export const NavbarContent = styled.div`
     transition: background-color 0.3s ease;
 
     &:hover {
-        color: white;
-        background-color: ${mainTheme.colors.yellowMain};
+      color: white;
+      background-color: ${mainTheme.colors.yellowMain};
     }
   }
 `;
@@ -158,5 +212,27 @@ export const MobileMenuWrapper = styled.div<{ isActive: boolean }>`
       content: "⇁";
       margin-right: 10px;
     }
+  }
+`;
+
+export const ContentWrapper = styled.main`
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+  .right-mob-arrow {
+    position: absolute;
+    right: -30px;
+    top: 10px;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 1rem;
+
+  @media only screen and (min-width: 600px) {
+    width: 90%;
   }
 `;

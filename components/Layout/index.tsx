@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { ContentWrapper } from "./styles";
 
 interface Props {
   children?: ReactNode;
-  // any props that come into the component
 }
 
 export default function Layout({ children }: Props) {
@@ -12,7 +12,7 @@ export default function Layout({ children }: Props) {
     <>
       <Navbar />
       <ContentWrapper>{children}</ContentWrapper>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
