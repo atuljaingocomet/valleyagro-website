@@ -40,8 +40,8 @@ export const FooterWrapper = styled.div`
   }
 
   .right {
-    width: 50%;
-    max-width: 70%;
+    width: 60%;
+    max-width: 40rem;
     ul {
       display: flex;
       justify-content: space-between;
@@ -234,7 +234,7 @@ export const ContentContainer = styled.div`
   width: 100%;
   padding: 0 1rem;
 
-  @media only screen and (min-width: 600px) {
+  /* @media only screen and (min-width: 600px) {
     width: 90%;
-  }
+  } */
 `;
