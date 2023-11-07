@@ -11,17 +11,26 @@ import BurgerMenu from "../../public/burgerMenu";
 import BurgerMenuOpen from "../../public/burgerMenuOpen";
 import { mainTheme } from "../../main-theme";
 
+const navItems = [
+  { name: "Home", link: "banner" },
+  { name: "About Us", link: "about-us" },
+  { name: "Products", link: "products" },
+  { name: "Contact Us", link: "contact-us" },
+];
+
 interface Props {
   isMobile: boolean;
+  handleMenuClose?: () => void;
 }
 
-const MenuSection = ({ isMobile }: Props) => {
+const MenuSection = ({ isMobile, handleMenuClose }: Props) => {
   return (
     <ul className={`${isMobile ? "menubar-mobile" : "menubar-container"}`}>
-      <li><a href="#">Home</a></li>
-      <li>About Us</li>
-      <li>Products</li>
-      <li><a href="#contact-us">Contact Us</a></li>
+      {navItems.map((item) => (
+        <li key={item.link} onClick={handleMenuClose}>
+          <a href={`#${item.link}`}>{item.name}</a>
+        </li>
+      ))}
     </ul>
   );
 };
@@ -29,16 +38,22 @@ const MenuSection = ({ isMobile }: Props) => {
 const Logo = () => {
   return (
     <LogoSection>
-      <Image alt="site-logo" src="/logo/valleyagro.svg" fill />
+      <a href="#">
+        <Image alt="site-logo" src="/logo/valleyagro.svg" fill />
+      </a>
     </LogoSection>
   );
 };
 
 const Navbar = () => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
-  const [currentSelectedMenu, setCurrentSelectedMenu] = useState("");
 
   const toggleMobileMenu = () => setIsMobileMenuVisible((prev) => !prev);
+
+  const handleMenuClose = () => {
+    console.log("function called");
+    setIsMobileMenuVisible(false);
+  };
   return (
     <NavbarWrapper>
       <NavbarContent>
@@ -58,7 +73,7 @@ const Navbar = () => {
           )}
         </span>
         <MobileMenuWrapper isActive={isMobileMenuVisible}>
-          <MenuSection isMobile={true} />
+          <MenuSection isMobile={true} handleMenuClose={handleMenuClose} />
         </MobileMenuWrapper>
       </NavbarContentMobile>
     </NavbarWrapper>

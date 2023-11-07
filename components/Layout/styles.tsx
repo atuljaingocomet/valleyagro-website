@@ -17,6 +17,7 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: white;
+  color: black;
   width: 100%;
 
   .footer-wrapper {

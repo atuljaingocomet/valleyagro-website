@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Products = () => {
   return (
-    <ProductWrapper>
+    <ProductWrapper id="products">
       <ContentContainer>
         <div className="section-wrapper">
           <div className="left">

@@ -113,5 +113,6 @@ export const AboutUsWrapper = styled.div`
 
   .feature-card {
     text-align: center;
+    font-weight: bold;
   }
 `;
