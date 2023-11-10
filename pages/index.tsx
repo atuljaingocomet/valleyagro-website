@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import HeroSection from "../components/HeroSection";
-import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/ContactUs_old";
 import Badges from "../components/Badges";
 import Products from "../components/Products";
+import Timeline from "../components/Timeline";
 import AboutUs from "../components/AboutUs";
 import styles from "@/styles/Home.module.css";
 
@@ -23,6 +24,7 @@ export default function Home() {
       </Head>
       <HeroSection />
       <AboutUs />
+      <Timeline />
       <Products />
       <Badges />
       <ContactUs />

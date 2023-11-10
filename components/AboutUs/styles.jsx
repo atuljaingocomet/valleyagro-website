@@ -62,9 +62,14 @@ export const AboutUsWrapper = styled.div`
   }
 
   .description {
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: 2px;
-    word-spacing: 5px;
+    font-weight: normal;
+    line-height: 2rem;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   .large-text {
@@ -76,7 +81,7 @@ export const AboutUsWrapper = styled.div`
   }
 
   .heading {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     margin: 0;
   }
 
