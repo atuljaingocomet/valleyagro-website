@@ -16,7 +16,7 @@ const ContactUs = () => {
               <br /> We&apos;re here to help!
             </p>
             <div className="social-icon">
-              <a href="#">
+              <a href="https://twitter.com/HarshGarg364549" target="_blank">
                 <img
                   src="/contact/twitter.svg"
                   alt="address"
@@ -25,7 +25,10 @@ const ContactUs = () => {
                   loading="lazy"
                 />
               </a>
-              <a href="#">
+              <a
+                href="https://www.facebook.com/profile.php?id=61554206002326&mibextid=LQQJ4d"
+                target="_blank"
+              >
                 <img
                   src="/contact/fb.svg"
                   alt="address"
@@ -34,7 +37,10 @@ const ContactUs = () => {
                   loading="lazy"
                 />
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/company/valley-agro"
+                target="_blank"
+              >
                 <img
                   src="/contact/linkedin.svg"
                   alt="address"
